@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8" /><title>Welcome to {{ site_name }}</title></head>
+<body style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+  <h1>Welcome to {{ site_name }}, {{ user.get_short_name }}!</h1>
+  <p>Thanks for creating your account. You're all set to get started.</p>
+  <p><a href="{{ site_url }}/users/dashboard/" style="background:#2563eb;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;">Go to Dashboard</a></p>
+  <hr />
+  <p style="color:#6b7280;font-size:12px;">You're receiving this because you signed up at {{ site_name }}.</p>
+</body>
+</html>

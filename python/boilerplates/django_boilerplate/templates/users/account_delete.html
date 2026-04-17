@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Delete Account{% endblock %}
+{% block content %}
+<div class="auth-container">
+  <h1>Delete Account</h1>
+  <p>This will deactivate your account. This action cannot be undone.</p>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <button type="submit" class="btn-danger">Yes, delete my account</button>
+    <a href="{% url 'users:settings' %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

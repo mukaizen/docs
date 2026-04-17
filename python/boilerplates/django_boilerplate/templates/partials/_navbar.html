@@ -1,0 +1,19 @@
+{% load core_tags %}
+<nav class="navbar">
+  <a class="navbar__brand" href="/">{{ SITE_NAME }}</a>
+  <ul class="navbar__links">
+    {% if user.is_authenticated %}
+      <li><a href="{% url 'users:dashboard' %}" class="{% active_link request 'users:dashboard' %}">Dashboard</a></li>
+      <li><a href="{% url 'users:profile' %}" class="{% active_link request 'users:profile' %}">Profile</a></li>
+      <li>
+        <form method="post" action="{% url 'users:logout' %}">
+          {% csrf_token %}
+          <button type="submit">Logout</button>
+        </form>
+      </li>
+    {% else %}
+      <li><a href="{% url 'users:login' %}">Login</a></li>
+      <li><a href="{% url 'users:register' %}">Register</a></li>
+    {% endif %}
+  </ul>
+</nav>
