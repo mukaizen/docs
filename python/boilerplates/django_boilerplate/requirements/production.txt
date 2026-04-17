@@ -1,0 +1,19 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Production requirements
+# Install with: pip install -r requirements/production.txt
+# ──────────────────────────────────────────────────────────────────────────────
+
+-r base.txt
+
+# WSGI server
+gunicorn>=22.0
+
+# Structured logging (optional — uncomment in production.py if used)
+# python-json-logger>=2.0
+
+# Monitoring (pick one)
+# sentry-sdk[django]>=2.5    # error tracking — https://sentry.io
+# scout-apm>=3.1             # performance monitoring
+
+# Security
+django-csp>=3.8              # Content-Security-Policy headers (optional)

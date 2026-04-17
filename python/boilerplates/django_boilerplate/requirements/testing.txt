@@ -1,0 +1,13 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Test requirements — used in CI
+# Install with: pip install -r requirements/testing.txt
+# ──────────────────────────────────────────────────────────────────────────────
+
+-r base.txt
+
+pytest>=8.2
+pytest-django>=4.8
+pytest-cov>=5.0
+pytest-xdist>=3.5
+factory-boy>=3.3
+faker>=25.0
